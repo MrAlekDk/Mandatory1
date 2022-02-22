@@ -1,0 +1,22 @@
+{
+  "name": "mandatory1",
+  "version": "1.0.0",
+  "description": "An assignment based upon the mandatory1 requirements",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrAlekDk/Mandatory1.git"
+  },
+  "author": "Alexander Sørensen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MrAlekDk/Mandatory1/issues"
+  },
+  "homepage": "https://github.com/MrAlekDk/Mandatory1#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
