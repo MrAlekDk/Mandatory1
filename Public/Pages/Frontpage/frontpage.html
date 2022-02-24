@@ -1,13 +1,13 @@
 <section class="main-content">
-    <h1 class="headline">Alexander Soerensen's notebook</h1>
+    <h1 class="headline">Alexander Soerensen's Node(JS)-book</h1>
     
     <div class="about">
-        <div class="headline"><h2>About this website</h2></div>
+        <div class="headline"><h2>About this website:</h2></div>
             <div class="carousel">
-            <div class="text-box fade"><p>This website was created as a solution for an assignement, given during my NodeJS elective 4th semester class. 
-            It aims to primarily showcase my accuired skills regarding NodeJs, but also to elaborate on some of the "theory" and tools we've topuched upon.</p></div>
+            <div class="text-box fade"><p>This website was created as an assignement, given during my NodeJS 4th semester class.</p></div> 
+            <div class="text-box fade"><p>It aims to primarily showcase my acquired skills regarding NodeJs, but also to elaborate on some of the "theory" and tools we've covered.</p></div>
             <div class="text-box fade"><p>The website is divided into sections, in an effort to cover everything in a organized manner. Links are at the top of the website.</p></div>
-            <div class="text-box fade"><p>Everything is custom-made by myself, otherwise source will be referenced</p></div>
+            <div class="text-box fade"><p>Everything is made by myself, otherwise source will be referenced</p></div>
         </div>
         <div class="picture">
             <img src="/Components/images/alek.jpg">
@@ -16,19 +16,19 @@
 
 </section>
 <script>
-//Script inspired by w3 school
+//Script inspired by w3 school, updated to match the JS coding we prefer
+//original can be found here: https://www.w3schools.com/howto/howto_js_slideshow.asp
 let slideIndex = 0;
 showSlides();
 function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("text-box");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "inherit";
-  setTimeout(showSlides, 4500); // Change image every 2 seconds
+  let slides = Array.from(document.getElementsByClassName("text-box"));
+  slides.map(node => node.style.display="none")
+  if (slideIndex >= slides.length) {
+      slideIndex = 0
+    }
+    slides[slideIndex].style.display = "inherit";
+    slideIndex++;
+  setTimeout(showSlides, 5500); // Change text every 5,5 seconds
 }
 </script>
 

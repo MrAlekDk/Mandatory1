@@ -1,3 +1,6 @@
+p{
+    align-self: center;
+}
 
 .main-content{
     display: flex;
@@ -37,18 +40,18 @@
   /* Fading animation, inspirered by w3school tutorial */
   .fade {
     -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
+    -webkit-animation-duration: 3.5s;
     animation-name: fade;
-    animation-duration: 1.5s;
+    animation-duration: 3.5s;
   }
   
   @-webkit-keyframes fade {
-    from {opacity: .4}
+    from {opacity: .1}
     to {opacity: 1}
   }
   
   @keyframes fade {
-    from {opacity: .4}
+    from {opacity: .1}
     to {opacity: 1}
   }
 
