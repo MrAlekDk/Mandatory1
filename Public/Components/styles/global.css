@@ -1,33 +1,48 @@
-body{
-    height:100%;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-image: url("/Components/images/zigzag.jpg");
-    height: 100%;
-    background-position: center;
+html{
+  background-image: url("/Components/images/zigzag.jpg");
+  background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position:center;
+    height: 100%;
+}
+
+body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     z-index: 0;
 }
 
-* {
-    box-sizing: border-box;
-  }
 
 p{
+    padding-left: 1%;
+    padding-right: 1%;
     font-weight: bold;
     z-index: 1;
     color:white;
-    background-color: rgba(77, 77, 77, 0.267);
+    font-size: 20px;
 }
 
-h1,h2{
+p:hover{
+  transition-duration: 600ms;
+}
+
+.headline{
+    display: flex;
+    flex-direction: row;
+    width: 48%;
+    padding-left: 1%;
+    padding-right: 1%;
     align-self:center;
     font-size: 45px;
     font-weight: bold;
     z-index: 1;
     color:white;
-    background-color: rgba(77, 77, 77, 0.267);
     border-radius: 2px;
+    justify-content: center;
+}
+h1{
+  align-self: center;
+  background-color: rgba(90, 88, 88, 0.452);
 }
 
 h2{
@@ -73,27 +88,6 @@ padding-bottom: 0.1%;
 font-style: italic;
 transition-duration: 300ms;
 }
-
-.main-content{
-  margin-top: 100px;
-  display: flex;
-  flex-direction: column;
-  }
-
-.about{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  justify-self: center;
-}
-
-.text-box{
-  align-self: center;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-}
-
 
 footer{
 bottom:0.2%;

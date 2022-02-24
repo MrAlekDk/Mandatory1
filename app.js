@@ -12,7 +12,7 @@ const footer = fs.readFileSync("./public/components/Footer/footer.html").toStrin
 
 const fpContent = fs.readFileSync("./public/pages/Frontpage/frontpage.html").toString();
 
-const frontpage = head.replace("½½PLACEHOLDER_TITLE½½","Alexander Sørensen") + header + fpContent + footer;
+const frontpage = head.replace("½½PLACEHOLDER_TITLE½½","Alexander Sørensen").replace("½½PLACEHOLDER_STYLESHEET½½","/Components/styles/frontpage.css") + header + fpContent + footer;
 
 app.get("/",(req,res)=>{
 
