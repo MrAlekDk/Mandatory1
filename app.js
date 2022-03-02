@@ -4,19 +4,28 @@ const PORT = 8080;
 
 app.use(express.static('Public'));
 
-const fs = require("fs")
 
-const head = fs.readFileSync("./public/components/header/head.html").toString();
-const header = fs.readFileSync("./public/components/header/header.html").toString();
-const footer = fs.readFileSync("./public/components/Footer/footer.html").toString();
-
-const fpContent = fs.readFileSync("./public/pages/Frontpage/frontpage.html").toString();
-
-const frontpage = head.replace("½½PLACEHOLDER_TITLE½½","Alexander Sørensen").replace("½½PLACEHOLDER_STYLESHEET½½","/Components/styles/frontpage.css") + header + fpContent + footer;
+const pages = require("./Template_engine/page_builder.js")
 
 app.get("/",(req,res)=>{
 
-    res.send(frontpage)
+    res.send(pages.frontpage)
+});
+
+app.get("/jspractises",(req,res)=>{
+    res.send(pages.jsPracPage)
+});
+
+app.get("/nodejs&express",(req,res)=>{
+    res.send(pages.nodeJsPage)
+});
+
+app.get("/terminalcommands",(req,res)=>{
+    res.send(pages.terCmdPage)
+});
+
+app.get("/tools",(req,res)=>{
+    res.send(pages.toolsPage)
 });
 
 app.listen(PORT,()=>{
