@@ -1,0 +1,164 @@
+[
+    {
+        "category":"NodeJs",
+        "title":"Chrome V8 Javascript engine",
+        "imgPath":"/Components/images/javascript_v8.png",
+        "text" :"Is a javascript Engine, very fast, revolutionised javascript, before this, Js was purely a frontend /client language, V8 introduced a runtime which means JS can be run outside of the browser/client. This opens the possibility to make backends, backend-software, read-write files, non-continuous-running scripting."
+},
+{
+    "category":"NodeJs",
+    "title":"NodeJs",
+    "imgPath":"/Components/images/nodejs.jpeg",
+    "text" :"A way to use Js code as backend, outside of client/browser, by making a runtime environment for running Js in the backend. It uses the v8 engine."
+},
+{
+    "category":"Tools",
+    "title":"Console.log",
+    "imgPath":"/Components/images/console_log.png",
+    "text" :"A tool for developers to peek at the data in our code. We don’t want to manipulate data inside of a console.log, so use “ , “ instead of other operations like “+”. "
+},
+{
+    "category":"Javascript",
+    "title":"Type coercion",
+    "imgPath":"/Components/images/type_coercion.png",
+    "text" :"Type coercion is an automated and implicit conversion of values from one datatype to another. It is implicit, because the developer does not have to specify the conversion, which would be an explicit conversion.This means that javascript is trying to interpret and understand what we write, so that the intended result is achieved. Javascript because of this, a language with a loose policy when it comes to variable types. It is important to be aware of javascripts type coercion, because it influences the way a developer should write for instance a comparison. = is used when assigning a value to a variable, aka. variable-assignment. == is comparing with type coercion, coercion happens first and then the comparison. === is when comparing WITHOUT type coercion, also called hard equality. As a general rule, using hard equality should be prioritized, instead of comparison with type-coercion. This ensures, that no unintended type-coercion takes place in our code, which could result in very critical errors in our program."
+},
+{
+    "category":"Tools",
+    "title":"REPL",
+    "imgPath":"/Components/images/type_coercion.png",
+    "text" :"REPL is an abbreviation of Read, evaluate, print, loop and is a tool for testing Js behaviour. A good example would be testing how type coercion is carried out. In this environment, you are able to write code and run it instantly. "
+},
+{
+    "category":"NodeJs",
+    "title":"CRUDable REST API",
+    "imgPath":"/Components/images/crud.png",
+    "text" :"A CRUDable REST API is an api (application programming interface) which is capable of carrying out CRUD (Create, Read, Update, Delete) functionality, while also implementing the architectural style and requirements for a REST-ful (Representational state-transfer) service. There are multiple practices to ensure a proper implementation, one of them being to structure endpoints and their corresponding HTTP-methods (See image below). A structure like this is very common and makes it easy for other developers to navigate around the written code."
+},
+{
+    "category":"Javascript",
+    "title":"Variables: Const, let & var",
+    "imgPath":"/Components/images/variables.png",
+    "text" :"When instantiating a variable in javascript, we use either var, let or const. Var is the old way of declaring new variables (before ES6). Var is problematic to use, because of it’s scope. If you declare a var outside of a function scope, it is global and can be accessed anywhere. If a var is declared inside a scope, it is only accessible inside the given scope. If you try to assign a new variable inside a function, with an identifier/name that has already been used, you will override the original var unknowingly. Var is also affected by hoisting just like functions. To help with these problems, let and const have been introduced. These two are block scoped, unlike the var which is globally scoped. Let is very similar to var, for instance you can change the value of a let. But unlike var, let cannot be re-declared within its scope. So if a let variable is defined with an identifier/name in the global scope (outside a function), trying to declare a new variable with the same identifier/name will give an error. Const are in many ways similar to let, but a variable declared with const cannot be updated or re-declared. Though it should be noted, that having a const variable containing an object cannot be updated, the object’s values ARE updatable. The const also HAVE to be initialized at declaration, unlike var and let."
+},
+{
+    "category":"Javascript",
+    "title":"Function declaration",
+    "imgPath":"/Components/images/function_declaration.png",
+    "text" :"A function declaration in javascript, consists of a couple of parts. Depending on if you want to encapsulate a function in a variable (see image below), you first use the keyword “function”. Then you would write the identifier/name of the function. Then inside parentheses you have the function parameters. Then inside curly brackets, you would write the statements which make the body of the function. If you write a return statement inside of the body, then the function will return the specified value, to the place where the function was invoked. "
+},
+{
+    "category":"Javascript",
+    "title":"Hoisting",
+    "imgPath":"/Components/images/hoisting.png",
+    "text" :"Function and variable declarations are “hoisted” to the top of run time. This means that if we call a function before it’s written declaration, there will be no runtime errors, since the function declaration is called before the actual function call. It should be noted that this rule only applies for functions and variables inside of the global scope (or outside of function scopes). Eventhough variables are also hoisted, variables cannot be used before their declaration, as this is where they will be initialised."
+},
+{
+    "category":"Javascript",
+    "title":"Anonymous functions",
+    "imgPath":"/Components/images/anonymous_function.png",
+    "text" :"Anonymous functions are functions without a name. After it’s initial creation/initialization it is not accessible, as it doesn't have an identifier. This is why they are often assigned to a variable."
+},
+{
+    "category":"Javascript",
+    "title":"Callback functions",
+    "imgPath":"/Components/images/callback.png",
+    "text" :"A callback function is a function which is passed as an argument for another function. In javascript, functions are executed in the sequence they are called, not when they’re defined. A good example would be that you want to use a function to display the result of another function. Here you could call the first function and save it’s return value, which you then pass to the second function. But an easier or more elegant solution is to just pass the first function to the second function, which is then capable of calling the passed function. (See image below for an example). "
+},
+{
+    "category":"Javascript",
+    "title":"Clean code",
+    "imgPath":"/Components/images/clean_code.png",
+    "text" :"When writing code, it’s good to follow good coding conventions, as this ensures clean and readable code. There are many ways to implement good coding convention, examples could be spacing, where “Const test = “string” “ is better than “const test=”string”“. General consistency throughout code is another way to write readable code. "
+},
+{
+    "category":"NodeJs",
+    "title":"Package.json",
+    "imgPath":"/Components/images/package_json.png",
+    "text" :"Package.json is a file that is needed in order to run our NodeJs server. It takes care of 3 responsibilities: Metadata, dependencies and project management/build tools. Package.json MUST be valid JSON, meaning that any missing commas, unclosed quotes etc. will hinder npm from using the package.json and introduce an error. "
+},
+{
+    "category":"NodeJs",
+    "title":"Importing in Node.js",
+    "imgPath":"/Components/images/import.png",
+    "text" :"When we want to import a module into our Node.js project, we use the function “require(“name-of-module-here”)”. When calling the require function, it will first look for built-in core node.js modules. Then it will search for NPM modules, in the node_modules folder and then it will look for local modules. Using “./” it will look for the directory/file in the given path. Examples of built-in modules are fs, http or url, NPM modules could be “express” and local modules are whatever we make ourselves. "
+},
+{
+    "category":"NodeJs",
+    "title":"Body parsing",
+    "imgPath":"/Components/images/body_parse.png",
+    "text" :"In order for our Node.js to handle HTTP request with content in the body (POST, PUT, PATCH), we need a middleware module to interpret the send data. It should extract the body portion of a request stream and expose/open it in the req.body. So in our case, we write “app.use(express.json());” which tells Node that the incoming data from a POST, PUT or PATCH request, should be interpreted/read as a JSON object. Alternatively you can use a “body-parser” which is another module, made by the same people who made express. "
+},
+{
+    "category":"Javascript",
+    "title":"For loop & Maps",
+    "imgPath":"/Components/images/map_vs_loops.png",
+    "text" :"Using loops is generally not a good practice for operating on an array, unless a “finger counting” functionality is needed. Loops are over-verbose, error prone (examples could be index out of bounds in java) and not functional. Instead of loops, map could be used which IS functional and immutable. Immutable means “unchangeable over time or unable to be changed”, and in the context of javascript, using map() ensures immutability, because map() doesn’t change the values of the original array, it returns a new array. Code example below shows how to return even numbers, from an original array with the number 1-4. It is clear, that using the functional approach is cleaner, more readable and has less chances of being errorprone (notice in the 2. Image, that multiple arrays have to be managed!). Code example taken from medium.com, Andrew Crites"
+},
+{
+    "category":"NodeJs",
+    "title":"Sending data from client",
+    "imgPath":"/Components/images/query_string.png",
+    "text" :"There’s two ways to pass data from client in a GET request. Either you use parameters via the url, called a Query string, url: ?key=value. The other option is using path variables, url: path/pathvariable-value. An example could be when using a GET request for a specific entry: beers/id. "
+},
+{
+    "category":"Tools",
+    "title":"Nodemon",
+    "imgPath":"/Components/images/nodemon.png",
+    "text" :"Nodemon is a tool for developing, which automatically detects changes in specified files in a given project project. Whenever a change is detected, nodemon will restart (hot-reload) the program/server. This is very convenient for developers, because you can instantly see what effect your newly written code has, without the annoyance of continually restarting the server/program manually. As mentioned, the tool is for development and should therefore only be used for that, as all data is essentially lost whenever an update in the code base is detected. In other words, Nodemon should NEVER be used in production."
+},
+{
+    "category":"Javascript",
+    "title":"Incrementation",
+    "imgPath":"/Components/images/incrementation.png",
+    "text" :"In javascript, the incrementation operation (++ or - -) has two ways of behavior:++ before a variable will increment before the action (prefix)++ after a variable will increment after the action (postfix)"
+},
+{
+    "category":"NodeJs",
+    "title":"Serving static assets in express",
+    "imgPath":"/Components/images/serving_static.png",
+    "text" :"In order for our client to be able to access different files, such as images, javascript files or style sheets for the view, we need to serve/pass the files. In express, we can achieve this by using the built-in middleware function “express.static(root, [options])”. This will tell express, which folder contains files we want to serve for the user. It’s good and general practice to call this folder “public”. It is possible to pass multiple folders, then you should just call the function multiple times."
+},
+{
+    "category":"Javascript",
+    "title":"Spreadoperator",
+    "imgPath":"/Components/images/spread_operator.png",
+    "text" :"The spread operator (...iterable) makes it possible to expand iterables such as an array. The spread syntax can be used when the properties of an object or elements in an array, has to be included in a list of some kind. Example below from javascripttutorial.net"
+},
+{
+    "category":"NodeJs",
+    "title":"Server side rendering vs. client side rendering",
+    "imgPath":"/Components/images/SSR_CSR.jpg",
+    "text" :"About where the rendering of a webpages happens; Either in the clients browser or on the server, BEFORE it’s served for the client. We have used both ways; Thymeleaf is a template engine which we used for building our html pages in java with spring boot. We also used javascript fetch, to fetch data and then make DOM manipulation to show our data in html elements (nodes). The benefits of SSR are lower load times, improvement regarding SEO - Search engine optimisation. It’s desired to make sure web crawlers read EVERYTHING from the start, to optimise potential clicks on the website. "
+},
+{
+    "category":"Tools",
+    "title":"Maven & NPM",
+    "imgPath":"/Components/images/npm_&_maven.png",
+    "text" :"Maven in a Spring Boot project and NPM in a Node.js project have some of the same responsibilities. Both could be described as “Project management tools”, but most importantly they take care of Metadata about the project, such as author, version, name of project etc, management and definition of project dependencies for instance “express” and build tools. "
+},
+{
+    "category":"TerminalCMDS",
+    "title":"NPM init",
+    "imgPath":"/Components/images/npm_init.png",
+    "text" :"This command will initialise the set up of a new or existing project. In the terminal you are guidede through the process of defining project name, author, etc. The end result is a package.json is created automatically for you."
+},
+{
+    "category":"TerminalCMDS",
+    "title":"NPM install",
+    "imgPath":"/Components/images/npm_install.png",
+    "text" :"This command will initialize the installation of dependencies to the project. If you write npm install express, express will be added to dependencies and also downloade and imported."
+},
+{
+    "category":"TerminalCMDS",
+    "title":"NPM Start",
+    "imgPath":"/Components/images/npm_start.png",
+    "text" :"This command will start a predefined command, which should be specified in the start propertoy of a package's script object. If nothing is defined, the command will run node server.js"
+},
+{
+    "category":"TerminalCMDS",
+    "title":"Node app.js",
+    "imgPath":"/Components/images/node_appjs.png",
+    "text" :"This command will start a NodeJs server. It will look for the file specified to run, in this case app.js"
+}
+]

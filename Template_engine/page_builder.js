@@ -1,4 +1,5 @@
 const fs = require("fs")
+const notes = require("./text.json")
 
 const head = fs.readFileSync("./public/components/header/head.html").toString();
 const header = fs.readFileSync("./public/components/header/header.html").toString();
@@ -11,12 +12,24 @@ const terCmdContent = fs.readFileSync("./public/pages/TerminalCmd/terminalCmd.ht
 const toolsContent = fs.readFileSync("./public/pages/Tools/tools.html").toString();
 
 const frontpage = head.replace("½½PLACEHOLDER_TITLE½½","Frontpage - Mandatory").replace("½½PLACEHOLDER_STYLESHEET½½","/Components/styles/frontpage.css") + header + fpContent + footer;
-const jsPracPage = head.replace("½½PLACEHOLDER_TITLE½½","Js Practises - Mandatory").replace("½½PLACEHOLDER_STYLESHEET½½","/Components/styles/frontpage.css") + header + jsPContent + footer;
-const nodeJsPage = head.replace("½½PLACEHOLDER_TITLE½½","NodeJS & Express - Mandatory").replace("½½PLACEHOLDER_STYLESHEET½½","/Components/styles/frontpage.css") + header + nodeJsContent + footer;
-const terCmdpage = head.replace("½½PLACEHOLDER_TITLE½½","Terminal commands - Mandatory").replace("½½PLACEHOLDER_STYLESHEET½½","/Components/styles/frontpage.css") + header + terCmdContent + footer;
-const toolsPage = head.replace("½½PLACEHOLDER_TITLE½½","Tools - Mandatory").replace("½½PLACEHOLDER_STYLESHEET½½","/Components/styles/frontpage.css") + header + toolsContent + footer;
+const jsPracPage = head.replace("½½PLACEHOLDER_TITLE½½","Js Practises - Mandatory").replace("½½PLACEHOLDER_STYLESHEET½½","/Components/styles/notes.css") + header + jsPContent + rowBuilder(notes.filter(note => note.category ==="Javascript"))+ footer;
+const nodeJsPage = head.replace("½½PLACEHOLDER_TITLE½½","NodeJS & Express - Mandatory").replace("½½PLACEHOLDER_STYLESHEET½½","/Components/styles/notes.css") + header + nodeJsContent + rowBuilder(notes.filter(note => note.category ==="NodeJs"))+footer;
+const terCmdpage = head.replace("½½PLACEHOLDER_TITLE½½","Terminal commands - Mandatory").replace("½½PLACEHOLDER_STYLESHEET½½","/Components/styles/notes.css") + header + terCmdContent + rowBuilder(notes.filter(note => note.category ==="TerminalCMDS"))+footer;
+const toolsPage = head.replace("½½PLACEHOLDER_TITLE½½","Tools - Mandatory").replace("½½PLACEHOLDER_STYLESHEET½½","/Components/styles/notes.css") + header + toolsContent + rowBuilder(notes.filter(note => note.category ==="Tools"))+footer;
 
 
+function rowBuilder(notes){
+    let id =1;
+    let rows = `<table id="table">`
+    rows+= notes.map(note => {
+        return `<tr class="note-box">
+        <td><h2>${note.title}<h2></td>
+        <td>${note.text}</td>
+        <td class="image-container"><img id="myImg${id++}" src="${note.imgPath}"><td></tr>`
+    })
+    rows+=`</table>`
+    return rows;
+}
 
 module.exports ={
     "frontpage":frontpage,
