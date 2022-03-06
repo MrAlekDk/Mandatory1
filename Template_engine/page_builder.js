@@ -19,14 +19,14 @@ const toolsPage = head.replace("½½PLACEHOLDER_TITLE½½","Tools - Mandatory").
 
 
 function rowBuilder(notes){
+    
     let id =1;
     let rows = `<table id="table">`
-    rows+= notes.map(note => {
+    rows += notes.map(note => {
         return `<tr class="note-box">
         <td><h2>${note.title}<h2></td>
         <td>${note.text}</td>
-        <td class="image-container"><img id="myImg${id++}" src="${note.imgPath}"><td></tr>`
-    })
+        <td class="image-container"><img id="myImg${id++}" src="${note.imgPath}"><td></tr>`}).join("")
     rows+=`</table>`
     return rows;
 }
