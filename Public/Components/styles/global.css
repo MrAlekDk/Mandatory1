@@ -1,7 +1,7 @@
 html{
   background-image: url("/Components/images/zigzag.jpg");
   background-position: center;
-    background-repeat: no-repeat;
+    background-repeat:repeat-y;
     background-size: cover;
     background-position:center;
     height: 100%;

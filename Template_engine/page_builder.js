@@ -26,7 +26,7 @@ function rowBuilder(notes){
         return `<tr class="note-box">
         <td><h2>${note.title}<h2></td>
         <td>${note.text}</td>
-        <td class="image-container"><img id="myImg${id++}" src="${note.imgPath}"><td></tr>`}).join("")
+        <td class="image-container"><img id="myImg${id++}" src="${note.imgPath}"></td></tr>`}).join("")
     rows+=`</table>`
     return rows;
 }
