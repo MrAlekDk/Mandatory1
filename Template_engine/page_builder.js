@@ -5,11 +5,11 @@ const head = fs.readFileSync("./Public/Components/header/head.html").toString();
 const header = fs.readFileSync("./Public/Components/header/header.html").toString();
 const footer = fs.readFileSync("./Public/Components/Footer/footer.html").toString();
 
-const fpContent = fs.readFileSync("./Public/pages/Frontpage/frontpage.html").toString();
-const jsPContent = fs.readFileSync("./Public/pages/Js_practises/Js_practises.html").toString();
-const nodeJsContent = fs.readFileSync("./Public/pages/NodeJS/NodeJs.html").toString();
-const terCmdContent = fs.readFileSync("./Public/pages/TerminalCmd/terminalCmd.html").toString();
-const toolsContent = fs.readFileSync("./Public/pages/Tools/tools.html").toString();
+const fpContent = fs.readFileSync("./Public/Pages/Frontpage/frontpage.html").toString();
+const jsPContent = fs.readFileSync("./Public/Pages/Js_practises/Js_practises.html").toString();
+const nodeJsContent = fs.readFileSync("./Public/Pages/NodeJS/NodeJs.html").toString();
+const terCmdContent = fs.readFileSync("./Public/Pages/TerminalCmd/terminalCmd.html").toString();
+const toolsContent = fs.readFileSync("./Public/Pages/Tools/tools.html").toString();
 
 const frontpage = head.replace("½½PLACEHOLDER_TITLE½½","Frontpage - Mandatory").replace("½½PLACEHOLDER_STYLESHEET½½","/Components/styles/frontpage.css") + header + fpContent + footer;
 const jsPracPage = head.replace("½½PLACEHOLDER_TITLE½½","Js Practises - Mandatory").replace("½½PLACEHOLDER_STYLESHEET½½","/Components/styles/notes.css") + header + jsPContent + rowBuilder(notes.filter(note => note.category ==="Javascript"))+ footer;
