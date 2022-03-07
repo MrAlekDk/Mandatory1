@@ -53,6 +53,12 @@ h1{
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .headline {
+    font-size: 30px;
+  }
+}
+
 h2{
   font-size: 35px;
   align-self: center;
@@ -66,8 +72,8 @@ h2{
 }
 
 @media screen and (max-width: 1000px) {
-  .headline,h2 {
-    font-size: 30px;
+  h2 {
+    font-size: 25px;
   }
 }
 
