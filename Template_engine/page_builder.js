@@ -1,9 +1,9 @@
 const fs = require("fs")
 const notes = require("./text.json")
 
-const head = fs.readFileSync("./Public/components/header/head.html").toString();
-const header = fs.readFileSync("./Public/components/header/header.html").toString();
-const footer = fs.readFileSync("./Public/components/Footer/footer.html").toString();
+const head = fs.readFileSync("./Public/Components/header/head.html").toString();
+const header = fs.readFileSync("./Public/Components/header/header.html").toString();
+const footer = fs.readFileSync("./Public/Components/Footer/footer.html").toString();
 
 const fpContent = fs.readFileSync("./Public/pages/Frontpage/frontpage.html").toString();
 const jsPContent = fs.readFileSync("./Public/pages/Js_practises/Js_practises.html").toString();
