@@ -1,15 +1,15 @@
 const fs = require("fs")
 const notes = require("./text.json")
 
-const head = fs.readFileSync("./public/components/header/head.html").toString();
-const header = fs.readFileSync("./public/components/header/header.html").toString();
-const footer = fs.readFileSync("./public/components/Footer/footer.html").toString();
+const head = fs.readFileSync("./Public/components/header/head.html").toString();
+const header = fs.readFileSync("./Public/components/header/header.html").toString();
+const footer = fs.readFileSync("./Public/components/Footer/footer.html").toString();
 
-const fpContent = fs.readFileSync("./public/pages/Frontpage/frontpage.html").toString();
-const jsPContent = fs.readFileSync("./public/pages/Js_practises/Js_practises.html").toString();
-const nodeJsContent = fs.readFileSync("./public/pages/NodeJS/NodeJs.html").toString();
-const terCmdContent = fs.readFileSync("./public/pages/TerminalCmd/terminalCmd.html").toString();
-const toolsContent = fs.readFileSync("./public/pages/Tools/tools.html").toString();
+const fpContent = fs.readFileSync("./Public/pages/Frontpage/frontpage.html").toString();
+const jsPContent = fs.readFileSync("./Public/pages/Js_practises/Js_practises.html").toString();
+const nodeJsContent = fs.readFileSync("./Public/pages/NodeJS/NodeJs.html").toString();
+const terCmdContent = fs.readFileSync("./Public/pages/TerminalCmd/terminalCmd.html").toString();
+const toolsContent = fs.readFileSync("./Public/pages/Tools/tools.html").toString();
 
 const frontpage = head.replace("½½PLACEHOLDER_TITLE½½","Frontpage - Mandatory").replace("½½PLACEHOLDER_STYLESHEET½½","/Components/styles/frontpage.css") + header + fpContent + footer;
 const jsPracPage = head.replace("½½PLACEHOLDER_TITLE½½","Js Practises - Mandatory").replace("½½PLACEHOLDER_STYLESHEET½½","/Components/styles/notes.css") + header + jsPContent + rowBuilder(notes.filter(note => note.category ==="Javascript"))+ footer;
